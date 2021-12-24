@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mouse_hooks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmatsuka <rmatsuka@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: rmatsuka < rmatsuka@student.42tokyo.jp>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 20:01:47 by rmatsuka          #+#    #+#             */
-/*   Updated: 2021/06/30 20:06:13 by rmatsuka         ###   ########.fr       */
+/*   Updated: 2021/12/24 15:51:28 by rmatsuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	mouse_press(int code, int x, int y, t_info *info)
 {
 	info->mouse_re = (((double)x / WIDTH)
 			* (info->end_re - info->start_re)) + info->start_re;
-	info->mouse_im = ((1 - (double)y / HEIGHT)
+	info->mouse_im = (((double)y / HEIGHT)
 			* (info->end_im - info->start_im)) + info->start_im;
 	if (code == MOUSE_CLICK)
 	{

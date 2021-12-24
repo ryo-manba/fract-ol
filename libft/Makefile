@@ -6,7 +6,7 @@
 #    By: rmatsuka < rmatsuka@student.42tokyo.jp>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 12:59:59 by rmatsuka          #+#    #+#              #
-#    Updated: 2021/05/31 11:19:58 by rmatsuka         ###   ########.fr        #
+#    Updated: 2021/12/24 15:52:41 by rmatsuka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,18 +50,7 @@ SRCS	=	ft_strlen.c \
 			safe_free.c \
 			get_next_line.c
 
-SRCS_B	=	ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c
-
 OBJS	=	$(SRCS:.c=.o)
-OBJS_B	=	$(SRCS_B:.c=.o)
 RM		=	rm -f
 LIBC	=	ar rcs
 CC		= 	gcc
@@ -70,18 +59,15 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 all:		$(NAME)
 
-bonus:		$(NAME) $(OBJS_B)
-			$(LIBC) $(NAME) $(OBJS_B)
-
 $(NAME):	$(OBJS)
 			$(LIBC) $(NAME) $(OBJS)
 
 clean:
-		$(RM) $(OBJS) $(OBJS_B)
+		$(RM) $(OBJS)
 
 fclean:		clean
-			$(RM) $(NAME) $(bonus)
+			$(RM) $(NAME)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re

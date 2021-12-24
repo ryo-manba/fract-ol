@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmatsuka <rmatsuka@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: rmatsuka < rmatsuka@student.42tokyo.jp>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 16:23:47 by rmatsuka          #+#    #+#             */
-/*   Updated: 2021/07/01 10:06:07 by rmatsuka         ###   ########.fr       */
+/*   Updated: 2021/12/24 15:34:47 by rmatsuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define HEIGHT 500
 
 /* keycode */
-# ifdef __linux__
+# if __APPLE__
 #  define KEY_SPACE 32
 #  define KEY_B 98
 #  define KEY_D 100

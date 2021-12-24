@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rmatsuka <rmatsuka@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: rmatsuka < rmatsuka@student.42tokyo.jp>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 11:11:36 by rmatsuka          #+#    #+#              #
-#    Updated: 2021/07/01 22:04:46 by rmatsuka         ###   ########.fr        #
+#    Updated: 2021/12/24 15:24:47 by rmatsuka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,8 @@ SRCS		=	calc.c \
 				main.c
 
 OBJS		=	$(SRCS:.c=.o)
-MLX			= 	-Imlx
-MLXFLAGS	=	-lXext -lX11 -lm -lbsd
+MLX			= 	-Iminilibx-linux -I/usr/X11/include
+MLXFLAGS	=	-lXext -lX11 -lm
 MLXPATH		=	./minilibx-linux
 RM 			=	rm -f
 
